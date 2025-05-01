@@ -1,0 +1,38 @@
+<!-- templates/options.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trickplay-Verzeichnis einstellen</title>
+</head>
+<body>
+    <h1>Trickplay-Verzeichnis</h1>
+    <form action="/save_options" method="post">
+        <label for="trickplay_path">Pfad zu den Trickplay-Bildern:</label>
+        <input type="text" id="trickplay_path" name="trickplay_path" value="{{ current_path }}" required>
+        <button type="submit">Speichern</button>
+    </form>
+    {% if message %}
+    <div style="margin-top: 1em; padding: 0.5em; background: #222; color: #0f0; border-radius: 5px;">
+        {{ message }}
+    </div>
+    {% endif %}
+
+    <h2>Analyse starten</h2>
+    <form action="/analyze" method="post">
+        <button type="submit">Trickplay-Bilder analysieren und X-Ray starten!</button>
+    </form>
+    {% if status %}
+    <div style="margin-top: 1em; padding: 1em; border: 1px solid #444; border-radius: 5px;
+                background-color: {% if status.success %}#2e7d32{% else %}#c62828{% endif %};
+                color: white;">
+    <strong>{{ status.message }}</strong><br>
+    {% if status.success %}
+        Bilder analysiert: {{ status.frames }}<br>
+        Erkannte Schauspieler: {{ status.actors_detected }}
+    {% endif %}
+    </div>
+    {% endif %}
+
+</body>
+</html>
