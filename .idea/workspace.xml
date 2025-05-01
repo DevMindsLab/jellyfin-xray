@@ -4,27 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71fd2762-80a2-4ca2-a8f7-fa6391c1659c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jellyfin-xray.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/xray.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recognizer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recognizer/face_matcher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recognizer/people_filter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recognizer/test_face_match.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recognizer/trickplay_splitter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recognizer/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/options.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/xray_overlay.html" afterDir="false" />
+    <list default="true" id="71fd2762-80a2-4ca2-a8f7-fa6391c1659c" name="Changes" comment="Projekt erstmal Stabil ohne Fehler aber noch nicht zusammengeführt und Fertig!">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "DevMindsLab"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DevMindsLab/jellyfin-xray.git",
+    "accountId": "ab31cc75-c2cb-4485-a49d-d8e259a76a00"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -78,6 +71,19 @@
       <option name="presentableId" value="Default" />
       <updated>1746053329469</updated>
     </task>
+    <task id="LOCAL-00001" summary="Projekt erstmal Stabil ohne Fehler aber noch nicht zusammengeführt und Fertig!">
+      <option name="closed" value="true" />
+      <created>1746110102137</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746110102137</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Projekt erstmal Stabil ohne Fehler aber noch nicht zusammengeführt und Fertig!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projekt erstmal Stabil ohne Fehler aber noch nicht zusammengeführt und Fertig!" />
   </component>
 </project>

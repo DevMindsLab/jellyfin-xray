@@ -24,6 +24,10 @@ jellyfin-xray/
 │   ├── face_matcher.py      # Hauptlogik: Bilder analysieren, Gesichter erkennen
 │   ├── utils.py             # Bild-Zerschneiden (split_trickplay_image)
 │   ├── people_filter.py     # GUID aus URL → Schauspieler abrufen (noch Teststand)
+├── web/
+│   └── templates/
+│       ├── options.html     # Webformular zur Analyse & Pfadangabe
+│       └── xray_overlay.html # HTML-Overlay zur Darstellung im Player
 ├── output/                  # Ergebnis-Ordner pro Film/Serie
 │   └── xray.json            # Analyseergebnis (timestamp → Schauspieler)
 ├── library.db               # Lokale Kopie der Jellyfin-Datenbank
@@ -40,7 +44,31 @@ jellyfin-xray/
 | Gesichtsanalyse    | ✅ Fertig | Erkennt Schauspieler mit `face_recognition` |
 | Schauspielerfilter | ✅ Fertig | GUID → relevante Schauspieler aus `library.db` |
 | Web-GUI (Flask)    | ✅ Fertig | Optionen-Formular + Analyse starten |
+| Web-Overlay (HTML) | ✅ Fertig | Anzeige-Overlay wie bei Amazon X-Ray |
 | Live-Zusammenführung | 🟡 Offen | Schauspielerfilter wird noch nicht von `face_matcher` verwendet |
+
+---
+
+## 🌐 Web-Interface
+
+Das Projekt enthält eine einfache **Flask-Weboberfläche**, erreichbar unter `http://localhost:5000/options`.  
+Sie befindet sich in `web/templates/options.html`.
+
+### Funktionen:
+- Setzen des Trickplay-Bildverzeichnisses
+- Analyse per Button starten
+- Statusmeldung zur Analyse
+
+---
+
+## 🎬 X-Ray Overlay (HTML-Frontend)
+
+Die Datei `web/templates/xray_overlay.html` stellt die **Live-Ansicht im Player** bereit – ähnlich wie bei Amazon X-Ray.
+
+### Ziel:
+- Anzeige erkannter Schauspieler synchron zur Abspielzeit
+- Integration als Overlay im Jellyfin-Frontend
+- Nutzung des generierten `xray.json` zur Live-Zuordnung
 
 ---
 
@@ -65,15 +93,13 @@ python main.py
 
 → erreichbar unter `http://localhost:5000/options`
 
-Dort: Trickplay-Pfad setzen → „Analysieren“ klicken
-
 ---
 
 ## 🧩 Geplante Weiterentwicklung
 
 - [ ] Filterlogik mit `get_movie_metadata_from_guid()` direkt in `face_matcher` nutzen
 - [ ] JSON-Dateien pro GUID statt global
-- [ ] Frontend: Overlay-Anzeige während Wiedergabe (Jellyfin Plugin)
+- [ ] Frontend: Overlay-Anzeige live synchronisieren
 - [ ] GUI: Film aus Liste auswählen statt manuelle GUID
 - [ ] Performance-Optimierung (Parallele Bildverarbeitung)
 
@@ -84,6 +110,7 @@ Dort: Trickplay-Pfad setzen → „Analysieren“ klicken
 - Die Gesichtserkennung basiert auf `face_recognition` und benötigt jeweils ein gutes `folder.jpg` pro Schauspieler (gesichtszentriert).
 - GUIDs müssen aus Jellyfin-URLs im Fragment (`#`) extrahiert werden – die Funktion dafür ist in `people_filter.py` enthalten.
 - Für Zuverlässigkeit ist `UUID(...).bytes_le` nötig (Little-Endian!).
+- Die Flask-GUI dient aktuell als manueller Einstiegspunkt – kann später durch automatisierte Trigger ersetzt werden.
 
 ---
 
