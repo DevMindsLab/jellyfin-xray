@@ -1,3 +1,5 @@
 face_recognition
-git+https://github.com/ageitgey/face_recognition_models
-setuptools
+opencv-python
+Pillow
+uuid
+python-dotenv

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71fd2762-80a2-4ca2-a8f7-fa6391c1659c" name="Changes" comment="Projekt erstmal Stabil ohne Fehler aber noch nicht zusammengeführt und Fertig!">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="71fd2762-80a2-4ca2-a8f7-fa6391c1659c" name="Changes" comment="README.md hinzugefügt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,11 +77,28 @@
       <option name="project" value="LOCAL" />
       <updated>1746110102137</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="README.md hinzugefügt">
+      <option name="closed" value="true" />
+      <created>1746110299920</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746110299920</updated>
+    </task>
+    <task id="LOCAL-00003" summary="README.md hinzugefügt">
+      <option name="closed" value="true" />
+      <created>1746110523575</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746110523575</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Projekt erstmal Stabil ohne Fehler aber noch nicht zusammengeführt und Fertig!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Projekt erstmal Stabil ohne Fehler aber noch nicht zusammengeführt und Fertig!" />
+    <MESSAGE value="README.md hinzugefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md hinzugefügt" />
   </component>
 </project>
